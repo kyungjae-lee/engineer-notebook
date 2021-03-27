@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<strong>Projects</strong>
+
+<nav>
+    <ul>
+        {% for project in site.data.project-types %}
+            <li>
+                <a href="{{site.baseurl}}/projects/{{project.folder}}/"
+                class="{% if page.url contains project.folder %}current{% endif
+                %}">{{project.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+{{content}}
+

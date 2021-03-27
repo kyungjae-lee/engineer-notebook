@@ -1,12 +1,12 @@
 ---
 layout: blog
-title: Blog
+title: C Programming
 ---
 
-<h1>Blog Main Page</h1>
+<h1>C Programming</h1>
 
 <ul>
-    {% for post in site.posts %}
+    {% for post in site.categories.cprogramming %}
         <li>
             <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
             <p>{{post.meta}}</p>

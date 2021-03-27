@@ -1,0 +1,11 @@
+- title: Personal Projects
+  folder: personal
+  content: This is a link to **Personal Prjects** page.
+
+- title: Team Projects
+  folder: team
+  content: This is a link to **Team Prjects** page.
+
+- title: Work Projects
+  folder: work
+  content: This is a link to **Work Prjects** page.

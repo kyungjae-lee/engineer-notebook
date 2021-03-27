@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Engineer's Notebook</title>
+    <title>{% if page.title %}{{page.title}} - {% endif %}Engineer's Notebook
+        {% if page.titleAfter %} - {{page.titleAfter}}{% endif %}</title>
+    <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
 </head>
 <body>
 
-<header>
+<header class="masthead {{page.mastheadClass}}">
     <h1>Engineer's Notebook</h1>
-    <nav>
-        <ul>
-            <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-            <li><a href="{{site.baseurl}}/blog.html">Blog</a></li>
-    </nav>
+    {% include nav.html navclass='nav-top' %}
 </header>
 
 {{content}}
+
+<footer>
+    {% include nav.html navclass='nav-bottom' %}
+    <p>This is footer.</p>
+</footer>
 
 </body>
 </html>

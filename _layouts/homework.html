@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<strong>Homework</strong>
+
+<nav>
+    <ul>
+        {% for homework in site.homework %}
+            <li>
+                <a href="{{site.baseurl}}/homework/{{homework.slug}}/"
+                class="{% if page.url contains homework.slug %}current{% endif
+                %}">{{homework.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<h1>{{page.title}}</h1>
+<figure>
+    <img src="{{stie.baseurl}}/img/{{page.img}}" alt="">
+    <figcaption>{{content}}</figcaption>
+</figure>

@@ -1,3 +1,9 @@
-markdown: redcarpet
+markdown: kramdown
 baseurl: /engineer-notebook
 exclude: ['README.md']
+permalink: pretty
+
+collections:
+  homework:
+    output: true
+    permalink: /homework/:path/

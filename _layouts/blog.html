@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<strong>Blog</strong>
+
+<nav>
+    <ul>
+        <li><a href="{{site.baseurl}}/cpp/" class="{% if page.url ==
+        '/cpp.html' %}current{% endif %}">C++ Programming</a></li>
+        <li><a href="{{site.baseurl}}/cprogramming/" class="{% if page.url
+        == '/cprogramming.html' %}current{% endif %}">C Programming</a></li>
+    </ul>
+</nav>
+
+{{content}}

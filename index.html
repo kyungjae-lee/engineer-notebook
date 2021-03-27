@@ -1,8 +1,30 @@
 ---
 layout: default
+titleAfter: Kyungjae's Engineering Blog
 ---
 
-<h1>Engineer's Notebook</h1>
+<h1>Introduction</h1>
 <p>Engineer's Notebook is Kyungjae's personal engineering blog where ideas
 and knowledge to make the world a better place come together.</p>
 
+<h2>Projects</h2>
+
+<ol>
+{% for project in site.data.project-types %}
+    <li>
+        <a href="{{site.baseurl}}/projects/{{project.folder}}">{{project.title}}</a>
+        {{project.content | markdownify}}
+    </li>
+{% endfor %}
+</ol>
+
+<h2>Recently Added C++ Posts</h2>
+
+<ul>
+    {% for post in site.categories.cpp limit:2 %}
+        <li>
+            <a href="">{{post.title}}</a>
+            <p>{{post.meta}}</p>
+        </li>
+    {% endfor %}
+</ul>

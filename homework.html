@@ -1,0 +1,12 @@
+---
+layout: default
+title: "Homework"
+---
+
+<h1>Homework</h1>
+
+{% for homework in site.homework %}
+    <h2>{{homework.title}}</h2>
+    <img srt="{{site.baseurl}}/img/{{homework.img}}" alt="">
+    <a href="{{site.baseurl}}{{homework.url}}">Read more about {{homework.title}}</a>
+{% endfor %}
